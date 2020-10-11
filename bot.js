@@ -11,7 +11,7 @@ var Twitter = new twit(config);
 // find latest tweet according the query 'q' in params
 var retweet = function() {
   var params = {
-        q: '#TaiwanNationalDay',  
+        q: '#SRHvsRR',  
         lang: 'en'
     }
     Twitter.get('search/tweets', params, function(err, data) {
@@ -50,8 +50,10 @@ setInterval(retweet,10000);
 // find a random tweet and 'favorite' it
 var favoriteTweet = function(){
   var params = {
-      q: '#TaiwanNationalDay',  // REQUIRED
-      lang: 'en'
+    q: '#SRHvsRR OR ',  // REQUIRED
+    result_type: "recent",
+    lang: 'en',
+      count:100
   }
   // find the tweet
   Twitter.get('search/tweets', params, function(err,data){
