@@ -11,7 +11,7 @@ var Twitter = new twit(config);
 // find latest tweet according the query 'q' in params
 var retweet = function() {
   var params = {
-        q: '#SRHvsRR',  
+        q: '#DCvsMI',  
         lang: 'en'
     }
     Twitter.get('search/tweets', params, function(err, data) {
